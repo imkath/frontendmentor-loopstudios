@@ -488,12 +488,14 @@ small.copyright {
 
   h2.creations-title {
     text-align: start;
+    font-size: 3rem;
   }
 
   button.creations-btn-see-all {
     position: absolute;
-    top: 0;
+    top: 4px;
     right: 10%;
+    padding: 0.8rem 50px;
   }
 
   ul.creations-list {
