@@ -379,6 +379,27 @@ ul.social-list {
   gap: 1rem;
 }
 
+.social-list li.social-list-item a {
+  position: relative;
+}
+
+.social-list li.social-list-item a::after {
+  content: "";
+  width: 20px;
+  height: 3px;
+  background-color: white;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translate(-50%);
+  opacity: 0;
+  transition: all 400ms ease-in-out;
+}
+
+.social-list li.social-list-item a:hover::after {
+  opacity: 1;
+}
+
 small.copyright {
   color: var(--dark-gray);
   font-size: 0.8rem;
