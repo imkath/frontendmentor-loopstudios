@@ -107,6 +107,28 @@ body {
   font-size: 1.8rem;
 }
 
+/* Esto es para que se vea una linea bajo los link en el nav del header y el footer */
+.nav li.nav-list-item a {
+  position: relative;
+}
+
+.nav li.nav-list-item a::after {
+  content: "";
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translate(-50%);
+  opacity: 0;
+  transition: all 400ms ease-in-out;
+}
+
+.nav li.nav-list-item a:hover::after {
+  opacity: 1;
+}
+
 /* Section Hero */
 section.hero {
   background-image: url("../assets/images/mobile/image-hero.jpg");
@@ -370,6 +392,13 @@ small.copyright {
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 768px) {
+  .nav li.nav-list-item a::after {
+    left: 0;
+    transform: translate(0);
+  }
 }
 
 @media (min-width: 768px) {
